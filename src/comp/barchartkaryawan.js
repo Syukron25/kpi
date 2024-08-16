@@ -115,13 +115,15 @@ export default function DiagramKaryawan() {
 
 return (
     <>
-    <div className="flex text-xs gap-1 w-full justify-end items-center pt-3 p-1 text-gray-500">
+    <div className="flex text-xs gap-1 w-full  justify-end items-center pt-3 p-1 text-gray-500">
         Urutkan :
         <button onClick={()=>tertinggi()} className="text-gray-500 bg-slate-200 btn-outline p-1 px-2 rounded-md">Tertinggi</button>
         <button onClick={()=>terendah()} className="text-gray-500 bg-slate-200 btn-outline p-1 px-2 rounded-md">Terendah</button>
         <button onClick={()=>abjad()} className="text-gray-500 bg-slate-200 btn-outline p-1 px-2 rounded-md">Abjad</button>
     </div>
+    <div className="h-full">
     <Bar data={data} options={options}></Bar>
+    </div>
     </>
 )
 

@@ -115,7 +115,9 @@ export default function Diagram() {
 
 
 return (
+    <div className="h-full w-full mb-24 md:mb-0">
     <Line data={data} options={options}></Line>
+    </div>
 )
 
 }

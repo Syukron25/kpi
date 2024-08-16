@@ -7,7 +7,7 @@ export default function Tabel({sendata}) {
   }
 
     return(
-        <div className="overflow-x-auto p-2 border border-gray-100">
+        <div className="overflow-x-auto md:p-2 p-0 border border-gray-100">
             <table className="table">
               {/* head */}
               <thead>

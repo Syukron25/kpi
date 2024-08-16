@@ -82,7 +82,7 @@ export default function Diagramprod(props) {
 
 
 return (
-    <Line data={data} options={options}></Line>
+    <Line  data={data} options={options}></Line>
 )
 
 }

@@ -3,7 +3,7 @@ export default function Card() {
 
 return (
     <>
-    <div className="w-1/3  items-center  h-fit rounded-xl border-l-12 border-purple-500 shadow-md">
+    <div className="md:w-1/3  items-center  h-fit rounded-xl border-l-12 border-purple-500 shadow-md">
         <div className="border border-slate-200 rounded-r-xl p-1 ">
         <p className="text-purple-500 text-xl font-bold text-end px-2 pb-1">Produksi</p>
         <div className="flex flex-row justify-center items-center">
@@ -14,7 +14,7 @@ return (
         </div>
     </div>
 
-    <div className="w-1/3  items-center  h-fit rounded-xl border-l-12 border-green-500 shadow-md">
+    <div className="md:w-1/3  items-center  h-fit rounded-xl border-l-12 border-green-500 shadow-md">
         <div className="border border-slate-200 rounded-r-xl  p-1 ">
         <p className="text-green-500 text-xl font-bold text-end px-2 pb-1">Produk Reject</p>
        <div className="flex flex-row justify-center items-center">
@@ -25,7 +25,7 @@ return (
         </div>
     </div>
 
-    <div className="w-1/3  items-center  h-fit rounded-xl border-l-12 border-teal-500 shadow-md">
+    <div className="md:w-1/3  items-center  h-fit rounded-xl border-l-12 border-teal-500 shadow-md">
         <div className="border border-slate-200 rounded-r-xl p-1 ">
         <p className="text-teal-500 text-xl font-bold text-end px-2 pb-1">kehadiran</p>
         <div className="flex flex-row justify-center items-center">

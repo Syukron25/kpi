@@ -5,13 +5,13 @@ import Sidebar from "@/comp/sidebar"
 export default function target() {
 
     return (
-        <div className="flex flex-col bg-slate-100 w-screen h-screen ">
-            <Sidebar target="bg-slate-100" />
-            <div className="flow-root m-4 ml-20">
-                <Searchtime />
-            </div>
-            <div className="flex flex-col gap-4 h-4/5 ml-20 w-11/12 rounded-3xl shadow-md p-12 bg-white ">
-                <div className="stats stats-vertical w-1/2 lg:stats-horizontal shadow">
+        <div className="flex flex-col bg-slate-100 w-screen md:h-screen h-full">
+      <Sidebar target="bg-slate-100" />
+      <div className="md:flow-root flex flex-col-reverse md:mt-4 mt-12 md:m-4 m-2 md:ml-20 gap-2">
+        <Searchtime />
+      </div>
+            <div className="flex flex-col h-4/5 m-1 md:ml-20 md:w-11/12 rounded-3xl shadow-md md:p-12 bg-white ">
+                <div className="stats md:stats-vertical stats-horizontal  md:w-1/2  lg:stats-horizontal shadow">
                     <div className="stat">
                         <div className="stat-title">Produksi</div>
                         <div className="stat-value">35</div>
@@ -31,7 +31,7 @@ export default function target() {
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-3 w-1/2">
+                <div className="flex flex-col gap-3 md:w-1/2 p-3">
                     <label className="input input-bordered flex items-center gap-2">
                         Target Produksi
                         <input type="text" className="grow" placeholder="input disini"/>

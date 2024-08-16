@@ -45,18 +45,18 @@ const [data, setData] = useState({
 
 
   return (
-    <div className="flex flex-col bg-slate-100 w-screen h-screen ">
-      <Sidebar user="bg-slate-100" />
-      <div className="flow-root m-4 ml-20">
-        <Buttontime />
-        <Searchtime />
-      </div>
-      <div className="flex h-4/5 ml-20 w-11/12 rounded-3xl shadow-md bg-white ">
-        <div className="flex w-1/3 p-3">
+    <div className="flex flex-col bg-slate-100 w-screen md:h-screen h-full">
+    <Sidebar user="bg-slate-100" />
+    <div className="md:flow-root flex flex-col-reverse md:mt-4 mt-12 md:m-4 m-2 md:ml-20 gap-2">
+      <Buttontime />
+      <Searchtime />
+    </div>
+      <div className="flex md:flex-row flex-col h-4/5 m-1 md:ml-20 md:w-11/12 rounded-3xl shadow-md bg-white ">
+        <div className="flex md:w-1/3 p-3">
           <Tabel sendata={Switchdata} />
           </div>
-        <div className="flex flex-col w-2/3 p-3">
-          <div className="flex h-1/3">
+        <div className="flex flex-col md:w-2/3 p-3 gap-4 md:gap-0">
+          <div className="flex h-1/3 ">
             <Diagramprod
               label='Produksi'
               data={data.produksi}
@@ -67,8 +67,8 @@ const [data, setData] = useState({
               label='Produk Reject'
               data={data.reject} 
               color='Red' /></div>
-          <div className="flex h-1/3">
-            <Diagramprod
+          <div className="flex h-1/3 mb-24 md:mb-0">
+            <Diagramprod 
               label='Kehadiran'
               data={data.kehadiran}
               color='Blue' /></div>

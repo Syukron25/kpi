@@ -75,28 +75,30 @@ function Customok(){
 
     return(  
       <>
-        <div className="float-start breadcrumbs bg-white px-3 rounded-2xl shadow-md">
-        <div className="join">
-          <button onClick={function(){aktiv(1), hariini()}} className={`join-item btn btn-outline  ${tombolaktif==1 ? 'btn-active' : ''}`}>Hari</button>
-          <button onClick={function(){aktiv(2), mingguini()}} className={`join-item btn btn-outline  ${tombolaktif==2 ? 'btn-active' : ''}`}>Minggu</button>
-          <button onClick={function(){aktiv(3), bulanini()}}  className={`join-item btn btn-outline  ${tombolaktif==3 ? 'btn-active' : ''}`}>Bulan</button>
-          <button onClick={function(){aktiv(4), tahunini()}}  className={`join-item btn btn-outline  ${tombolaktif==4 ? 'btn-active' : ''}`}>Tahun</button>
-          <button onClick={function(){aktiv(5), Custom()}} className={`join-item btn btn-outline  ${tombolaktif==5 ? 'btn-active' : ''}`}>Custom</button>
+        <div className="float-start breadcrumbs  bg-white md:px-3 rounded-2xl shadow-md">
+        <div className="join w-full md:w-fit justify-center md:ju">
+          <button onClick={function(){aktiv(1), hariini()}} className={`join-item btn-sm md:btn-md btn btn-outline  ${tombolaktif==1 ? 'btn-active' : ''}`}>Hari</button>
+          <button onClick={function(){aktiv(2), mingguini()}} className={`join-item btn-sm md:btn-md btn btn-outline  ${tombolaktif==2 ? 'btn-active' : ''}`}>Minggu</button>
+          <button onClick={function(){aktiv(3), bulanini()}}  className={`join-item btn-sm md:btn-md btn btn-outline  ${tombolaktif==3 ? 'btn-active' : ''}`}>Bulan</button>
+          <button onClick={function(){aktiv(4), tahunini()}}  className={`join-item btn-sm md:btn-md btn btn-outline  ${tombolaktif==4 ? 'btn-active' : ''}`}>Tahun</button>
+          <button onClick={function(){aktiv(5), Custom()}} className={`join-item btn btn-sm md:btn-md btn-outline  ${tombolaktif==5 ? 'btn-active' : ''}`}>Custom</button>
         </div>
-        <div className="join">
+        <div className="join w-full md:w-fit justify-center ">
         <p className="px-5">{tanggal.startDate.getDate()+"/"+(tanggal.startDate.getMonth()+1)+'/'+tanggal.startDate.getFullYear()} - {tanggal.endDate.getDate()+"/"+(tanggal.endDate.getMonth()+1)+'/'+tanggal.endDate.getFullYear()}</p>
         </div>
        
       </div>
 
-<div className={`fixed left-72 gap-1 top-24 z-30 ${kaleaktif ? 'flex' : 'hidden'}`}>
-  
+<div className={`fixed md:left-72 flex-col md:top-24 top-44 z-30 ${kaleaktif ? 'flex' : 'hidden'}`}>
+<div className="w-full flex gap-1 bg-slate-100 p-2 justify-end">
+  <button onClick={()=>Customok()} className="btn btn-sm w-12  btn-primary">OK</button>
+<button onClick={()=>setKalAktif(false)} className="btn btn-sm w-12  btn-error">X</button>
+</div>
 <DateRange
     ranges={[selectionRange]}
     onChange={(e)=>setRange(e.selection)}
   />  
-  <button onClick={()=>Customok()} className="btn btn-primary">OK</button>
-  <button onClick={()=>setKalAktif(false)} className="btn btn-error">X</button>
+  
   </div></>
     )
 }
